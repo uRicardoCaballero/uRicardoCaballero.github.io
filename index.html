@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Dev</title>
+  <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="https://i.pinimg.com/originals/23/49/2d/23492d49eefc1794c50377c2613baa00.jpg">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1 ">
+</head>
+
+<body>
+  <i class="icon-menu burger-button" id="burger-menu"></i>
+  <header class="header">
+    <div class="container">
+      <figure class="logo"><img src="https://i.pinimg.com/originals/23/49/2d/23492d49eefc1794c50377c2613baa00.jpg" alt="Logotipo"></figure>
+      <nav class="menu">
+        <ul>
+          <li>
+            <a class="link" href="#item">Item-1</a>
+          </li>
+          <li>
+            <a class="link" href="#item">Item-2</a>
+          </li>
+          <li>
+            <a class="link" href="#item">Item-3</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="container">
+    <h2 class="event-title">Más sobre mi</h2>
+  </div>
+  <section id="eventos" class="event-list">
+    <div class="container">
+      <article class="event">
+        <figure class="event-imageContainer">
+          <img class="event-image" src="https://images.pexels.com/photos/196646/pexels-photo-196646.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" width="500" alt="experiencia">
+        </figure>
+        <div class="event-detail">
+          <h3>Project</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo quae, voluptates autem inventore minus esse, corrupti, enim ea distinctio sed provident quo error praesentium. Nesciunt dolorum quibusdam commodi accusantium corrupti.</p>
+          <a href="">Más</a>
+        </div>
+      </article>
+      <article class="event">
+        <figure class="event-imageContainer">
+          <img class="event-image" src="https://images.pexels.com/photos/196646/pexels-photo-196646.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" width="500" alt="experiencia">
+        </figure>
+        <div class="event-detail">
+          <h3>Project</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo quae, voluptates autem inventore minus esse, corrupti, enim ea distinctio sed provident quo error praesentium. Nesciunt dolorum quibusdam commodi accusantium corrupti.</p>
+          <a href="">Más</a>
+        </div>
+      </article>
+      <article class="event">
+        <figure class="event-imageContainer">
+          <img class="event-image" src="https://images.pexels.com/photos/196646/pexels-photo-196646.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" width="500" alt="experiencia">
+        </figure>
+        <div class="event-detail">
+          <h3>Project</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo quae, voluptates autem inventore minus esse, corrupti, enim ea distinctio sed provident quo error praesentium. Nesciunt dolorum quibusdam commodi accusantium corrupti.</p>
+          <a href="">Más</a>
+        </div>
+      </article>
+      <article class="event">
+        <figure class="event-imageContainer">
+          <img class="event-image" src="https://images.pexels.com/photos/196646/pexels-photo-196646.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" width="500" alt="experiencia">
+        </figure>
+        <div class="event-detail">
+          <h3>Project</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo quae, voluptates autem inventore minus esse, corrupti, enim ea distinctio sed provident quo error praesentium. Nesciunt dolorum quibusdam commodi accusantium corrupti.</p>
+          <a href="">Más</a>
+        </div>
+      </article>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container">
+      <div>
+        <p class="texto_footer">Developer name </p>
+      </div>
+      <div>
+        <p class="texto_footer">contact  <a href="">user@email.com</a></p
+          class="texto_footer">
+      </div>
+    </div>
+  </footer>
+  <script>
+    const burgerButton = document.querySelector('#burger-menu');
+    const menu = document.querySelector('.menu');
+    const movileWidth = window.matchMedia('screen and (max-width:720px)');
+    movileWidth.addListener(validation);
+
+    function validation(evento){
+      if(evento.matches){
+        burgerButton.addEventListener('click', hide_show_menu);
+      }else{
+        burgerButton.removeEventListener('click', hide_show_menu);
+      }
+    }
+    validation(movileWidth);
+    function hide_show_menu(){
+      if(menu.classList.contains('is-active')){
+        menu.classList.remove('is-active');
+      }else{
+        menu.classList.add('is-active');
+      }
+    }
+  </script>
+</body>
+
+</html>
